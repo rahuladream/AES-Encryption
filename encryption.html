@@ -1,0 +1,27 @@
+<script src="js/jquery-2.1.1.min.js"></script>
+<!-- Google CodeLab Crypto JS License  
+    There are lot of encrytption algorithm you can use any one
+
+    Url link to downlaod google code lab for more encryption algorithm
+    https://code.google.com/archive/p/crypto-js/
+-->
+<script src="js/aes.js"></script>
+<script>
+    /*
+    Define Data for encryption 
+    data = which neeed to encrypt
+    key = for private encryption key
+    */
+    var data = "9695100143" 
+    var key = "rahul"
+    var encrypted = CryptoJS.AES.encrypt(data,key);
+    console.log(encrypted.toString()) // Encrypted data
+
+    var decryptedBytes = CryptoJS.AES.decrypt(encrypted, key);
+    var plaintext = decryptedBytes.toString(CryptoJS.enc.Utf8); // using utf8 to change format
+    console.log(plaintext); // Decryted Data
+
+    /*
+    Use Console to view the encryption and decryption value
+    */
+</script>
